@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claude.ai use per person, by state</title>
+<meta name="description" content="Which US states use Claude.ai more than their working-age population would predict. Usage per capita index for the 50 states and D.C., May 2026.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' rx='3' fill='%23256abf'/></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+
+  <header class="head">
+    <p class="eyebrow">Anthropic Economic Index &middot; May 2026</p>
+    <h1>Which states use Claude.ai more than their population would predict?</h1>
+    <p class="deck">
+      The usage per capita index compares a state&rsquo;s share of all US Claude.ai
+      conversations with its share of US working-age people.
+      <strong>An index of 1.0 means the two match exactly</strong> &mdash; above 1.0 the state
+      is using Claude.ai more than its population alone would predict, below 1.0 less.
+    </p>
+  </header>
+
+  <section class="hero" aria-label="Headline figure">
+    <div class="hero-fig">
+      <span class="hero-num" id="heroNum">3.32</span>
+      <span class="hero-lab">
+        <strong id="heroName">the District of Columbia</strong>
+        <span id="heroSub">tops the country at more than three times the national rate</span>
+      </span>
+    </div>
+  </section>
+
+  <section class="card" aria-labelledby="mapTitle">
+    <h2 id="mapTitle">The map</h2>
+    <p class="sub">States are grouped by where they rank among all 51 places. Hover over a state &mdash; or tap it on a phone &mdash; for its name and index.</p>
+
+    <div class="map-wrap" id="mapWrap">
+      <svg id="map" viewBox="0 0 975 610" role="group" aria-label="Map of US states coloured by Claude.ai usage per capita index"></svg>
+      <div class="tip" id="tip" role="status" aria-live="polite" hidden>
+        <span class="tip-name"></span><span class="tip-val"></span><span class="tip-rank"></span>
+      </div>
+    </div>
+
+    <ul class="legend" id="legend"></ul>
+    <p class="note">D.C. is too small to see at this scale, so it is drawn as a labelled marker beside Maryland.</p>
+  </section>
+
+  <section class="card" aria-labelledby="topTitle">
+    <h2 id="topTitle">The top 10</h2>
+    <p class="sub">Highest usage per capita index, including the District of Columbia.</p>
+    <ol class="top10" id="top10"></ol>
+  </section>
+
+  <section class="card" aria-labelledby="tableTitle">
+    <h2 id="tableTitle">All 51 places</h2>
+    <details>
+      <summary>Show the full table</summary>
+      <div class="table-scroll">
+        <table id="fullTable">
+          <caption class="sr-only">Usage per capita index for the 50 states and the District of Columbia, May 2026</caption>
+          <thead><tr><th scope="col">Rank</th><th scope="col">State</th><th scope="col">Index</th><th scope="col">Group</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </details>
+  </section>
+
+  <footer class="foot">
+    <p class="source">
+      Data: <a href="https://www.anthropic.com/research/economic-index-june-2026-report">Anthropic Economic Index</a>,
+      Claude.ai conversations on the Free, Pro and Max plans, May 2026, released 26 June 2026. Used under CC BY.
+    </p>
+    <p class="source dim">The index covers people aged 15 to 64. Values are rounded to two decimals, as published. Built for JRNL&nbsp;3700.</p>
+  </footer>
+
+</main>
+<script src="app.js"></script>
+</body>
+</html>

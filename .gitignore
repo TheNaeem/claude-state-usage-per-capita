@@ -1,0 +1,6 @@
+# the source CSV is deliberately not published here
+*.csv
+
+# scratch
+.DS_Store
+Thumbs.db
